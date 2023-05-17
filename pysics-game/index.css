@@ -1,0 +1,17 @@
+
+#title{
+	font-size: 60px;
+	font-style: italic;
+	color: #030202;
+	text-align: center;
+}
+
+#canvas{
+	border: 1px solid #060606;
+	background: #20f4ec;
+    width: 900px;
+	height: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}

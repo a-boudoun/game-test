@@ -3,9 +3,7 @@ const HIGH_TEMPERATURES = {
 	today: 77,
 	tomorrow: 80
   };
-  
-  // Only change code below this line
-  
+    
   const {todaay, tomoarrow, yesterday} = HIGH_TEMPERATURES;
   console.log("today:", todaay);
   console.log("tomorrow:", tomoarrow);
