@@ -4,13 +4,11 @@
 // }
 // const {name:ll, last:ee} = First;
 // console.log(ll);
-const gree = (name, callback) => {
-  console.log("Hello, " + name + "!");
-  callback();
-}
-
-const sayGoodbye = () => {
-  console.log("Goodbye!");
-}
-
-gree("Alice", sayGoodbye); 
+var gree = function (name, callback) {
+    console.log("Hello, " + name + "!");
+    callback();
+};
+var sayGoodbye = function () {
+    console.log("Goodbye!");
+};
+gree("Alice", sayGoodbye);
