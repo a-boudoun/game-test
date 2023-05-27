@@ -2,10 +2,10 @@
 #title{
 	font-style: italic;
 	color: #030202;
-	text-align: center;
+	/* text-align: center; */
 }
 
-#canvas{
+#Lcanvas{
 	border: 1px solid #060606;
 	background: #7AC7C4;
     width: 800px;
