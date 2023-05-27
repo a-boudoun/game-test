@@ -1,47 +1,31 @@
-// import * as Matter from 'matter-js';
+import { Engine, Render, Bodies, World } from 'matter-js';
+class Program
+{
+    public static Main(): void
+    {
+        // Create an engine
+        let engine = Engine.create();
+        
+        // Create a renderer
+        let render = Render.create({
+            element: document.body,
+            engine: engine
+        });
 
-// var Engine = Matter.Engine,
-// Render = Matter.Render,
-// Runner = Matter.Runner,
-// Bodies = Matter.Bodies,
-// Composite = Matter.Composite;
-// // Get the canvas element
+        // Create two boxes and a ground
+        let boxA = Bodies.rectangle(300, 100, 80, 80);
+        let boxB = Bodies.rectangle(350, 50, 80, 80);
+        let ground = Bodies.rectangle(300, 310, 810, 60, { isStatic: true });
 
-// // create an engine
-// var engine = Engine.create();
+        // Add all of the bodies to the world
+        World.add(engine.world, [boxA, boxB, ground]);
 
-// // create a renderer
-// var render = Render.create({
-// element: document.body,
-// engine: engine,
-// });
+        // Run the engine
+        Engine.run(engine);
 
-//TODO: fix this
-// // create two boxes and a ground
-// // Create bodies
-// const boxA = Matter.Bodies.rectangle(40, 20, 80, 80);
-// const boxB = Matter.Bodies.rectangle(45, 50, 80, 80);
-// const ground = Matter.Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
+        // Run the renderer
+        Render.run(render);
+    }
+}
 
-// // Add bodies to the world
-// Matter.World.add(engine.world, [boxA, boxB, ground]);
-
-// // Start the engine
-// Matter.Engine.run(engine);
-
-// // Start the renderer
-// Matter.Render.run(render);
-
-
-// // add all of the bodies to the world
-// Composite.add(engine.world, [boxA, boxB, ground]);
-
-// // run the renderer
-// Render.run(render);
-
-// // create runner
-// var runner = Runner.create();
-
-// // run the engine
-// Runner.run(runner, engine);
-// // Render on changes
+Program.Main();

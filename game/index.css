@@ -1,6 +1,5 @@
 
 #title{
-	font-size: 60px;
 	font-style: italic;
 	color: #030202;
 	text-align: center;
@@ -8,9 +7,9 @@
 
 #canvas{
 	border: 1px solid #060606;
-	/* background: #7AC7C4; */
-    width: 900px;
-	height: 700px;
+	background: #7AC7C4;
+    width: 800px;
+	height: 600px;
     margin-left: auto;
     margin-right: auto;
     display: block;
