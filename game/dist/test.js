@@ -8,8 +8,13 @@ Composite = Matter.Composite;
 
 // create an engine
 var canvaa = document.getElementById("Lcanvas");
-var engine = Engine.create();
-console.log(engine);
+var engine = Engine.create({
+	gravity:{
+		x:0,
+		y:1,
+		scale:0.001,
+	},
+});
 // create a renderer
 var render = Render.create({
 	engine: engine,
@@ -27,11 +32,12 @@ var boxA =  Bodies.circle(400, 20, 20, { inertia: Infinity });
 var ground = Bodies.rectangle(400, 610, 810, 60, { isStatic: true });
 var sqf = Bodies.rectangle(400, 0, 810, 60, { isStatic: true });
 var wall1 = Bodies.rectangle(0, 300, 60, 810, { isStatic: true });
+var wall2 = Bodies.rectangle(800, 300, 60, 810, { isStatic: true });
 boxA.restitution = 1;
 boxA.friction = 0;
 boxA.frictionAir = 0;
 // add all of the bodies to the world
-Composite.add(engine.world, [boxA, ground, sqf]);
+Composite.add(engine.world, [boxA, ground, sqf, wall1, wall2]);
 
 // run the renderer
 Render.run(render);
